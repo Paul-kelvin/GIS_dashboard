@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Redirect_dashboard()
+        {
+            window.location = "http://localhost:3000/index.php"
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INPUT PAGE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <div>
+            <ul class="menu">
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-pen-alt"></i>
+                        <input type="button" class="buttons--design" value="Data Input"/>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <input class="buttons--design"  type="button" value="Go Back" placeholder="Back" onclick="Redirect_dashboard();"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--tittle">
+             <span></span>
+             <h2>Input your Financial Data Here...<i class="fas fa-pen-alt"></i></h2>
+            </div> 
+            <div class="user--info">
+             <div class="search--box">
+             <i class="fa-solid fa-search"></i>
+             <input type="text" placeholder="Search"/>
+             </div>
+             <img src="./images/420282196_46011.jpg" alt="" />
+            </div>
+         </div>
+         <form action="process.php" method="post">
+         <div class="input--container">
+            <div class="halves">
+            <div class="input-box">
+                <span><h3>Date</h3></span><br>
+                <input type="date" name="date" placeholder="Enter the date" required>
+            </div>
+            <div class="input-box">
+                <span><h3>Transaction Type</h3></span><br>
+                <select name="Transaction" placeholder="Choose the Transaction Type" required>
+                    <option value="C-T" selected="selected">Cash Transaction</option>
+                    <option value="D-T" selected="selected">Debit Transaction</option>
+                    <option value="CR-T" selected="selected">Credit Transaction</option>
+                    <option value="I-T" selected="selected">Investment Transaction</option>
+                    <option value="FC-T" selected="selected">Foriegn Currency Transaction</option>
+                    <option value="CH-T" selected="selected">Choose the Transaction Type...</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span><h3>Category</h3></span><br>
+                <select name="Category" placeholder="" required>
+                    <option value="O-X" selected="selected">Office Expenses</option>
+                    <option value="P-X" selected="selected">Personal Expenses</option>
+                    <option value="E-x" selected="selected">Educational Expenses</option>
+                    <option value="H-X" selected="selected">Health Expenses</option>
+                    <option value="M-X" selected="selected">Maintenance Expenses</option>
+                    <option value="C-C" selected="selected">Choose the Category...</option>
+                </select>
+            </div>
+            </div>
+            <div class="halves">
+            <div class="input-box">
+                <span><h3>Amount</h3></span><br>
+                <input type="number" min="0.00" step="any" name="amt" placeholder="Enter Amount" required>
+            </div>
+            <div class="input-box">
+                <span><h3>Status</h3></span><br>
+                <select name="Status" placeholder="" required>
+                    <option value="P" selected="selected">Pending</option>
+                    <option value="C" selected="selected">Completed</option>
+                    <option value="ST" selected="selected">Status</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span class="title"><h3>Description</h3></span><br>
+                <input type="text" name="Description" placeholder="Enter Description..." required>
+            </div>
+            <input class="buttonContainer" name="submit" type="submit">
+            </div>
+    </div>
+    </form>
+    </div>
+</body>
+</html>

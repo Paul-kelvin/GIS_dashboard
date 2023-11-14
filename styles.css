@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 78px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.7s linear;
+    background: rgba(8, 53, 8, 0.845);
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.logo img{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 45%;
+}
+.menu{
+    height: 88px;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+} 
+.menu li:hover, .active{
+    background: #e0e0e059;
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.5rem;
+}
+.logout{
+    position: absolute;
+    bottom: -450px;
+    left: 0;
+    width: 100%;
+}
+.main--content{
+    position: relative;
+    background: rgba(7, 50, 7, 0.39);
+    padding: 1rem;
+    width: 100%;
+
+}
+.header--wrapper img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30%;
+}
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header--tittle{
+    color: rgb(10, 49, 10);
+}
+.user--info{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.search--box{
+    background: rgba(219, 232, 218, 0.839);
+    border-radius: 15px;
+    color: rgba(7, 50, 7, 0.39);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 12px;
+}
+.search--box input{
+    background: transparent;
+    padding: 6px;
+}
+.search--box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.search--box i:hover{
+    transform: scale(1.2);
+}
+.card--container{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main--title{
+    color:rgb(10, 49, 10);
+    border-radius: 10px;
+    padding: 1.2rem;
+}
+.payment--card{
+    background: rgba(219, 232, 218, 0.839);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 298px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.payment--card:hover{
+    transform: translateY(-7px);
+}
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.amount--value{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+.icon{
+    color: #fff;
+    padding: 1rem;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: red;
+}
+.card--details{
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.tabular--wrapper{
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+thead{
+    background: rgba(8, 53, 8, 0.845);
+    color: #fff;
+}
+th{
+    padding: 15px;
+    text-align: left;
+
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+}
+.buttons--design{
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+}
+.input--container{
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+}
+.halves{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 50px;
+}
+.input-box{
+    position: relative;
+    width: 250px;
+    cursor: pointer;
+}
+.input-box input{
+    width: 100%;
+    border: 3px  rgba(6, 52, 6, 0.92);
+    cursor: pointer;
+    padding: 15px;
+    background: rgba(8, 53, 8, 0.727);
+    border-radius: 10px;
+    color: #fff;
+
+}
+.buttonContainer{
+    margin-left: 50px;
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(4, 58, 4, 0.795);
+    cursor: pointer;
+}
+.buttonContainer:hover{
+    transform: scale(1.1);
+}
+.input-box select{
+    width: 100%;
+    border: 3px  rgba(6, 52, 6, 0.92);
+    cursor: pointer;
+    padding: 15px;
+    background: rgba(8, 53, 8, 0.727);
+    border-radius: 10px;
+    color: #fff;
+}
